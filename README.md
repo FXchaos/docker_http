@@ -8,8 +8,8 @@ This ... is licensed under the Apache License, Version 2.
 
 ## Prerequisites
 
-* Docker is required. See the [official installation documentation](https://docs.docker.com/get-docker/){:target="_blank" rel="noopener"}.
-* You need a free MaxMind account to download the [GeoLite2 databases](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data){:target="_blank" rel="noopener"}.
+* Docker is required. See the [official installation documentation](https://docs.docker.com/get-docker/).
+* You need a free MaxMind account to download the [GeoLite2 databases](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data).
 
 ## Requirements
 
