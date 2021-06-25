@@ -9,18 +9,18 @@ This ... is licensed under the Apache License, Version 2.
 ## Prerequisites
 
 * Docker is required. See the [official installation documentation](https://docs.docker.com/get-docker/).
-* You need a free MaxMind account to download the [GeoLite2 databases](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data).
+* You need a free MaxMind GeoLite2 account to download the [GeoLite2 databases](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data).
 
 ## Requirements
 
-
+* Get your active MaxNMind license key (`<YOUR_LICENSE_KEY>`).
 
 ## Usage
 
 Build an image:
 
 ```
-docker build -t http --build-arg GEOLITE2_LICENSE_KEY= .
+docker build -t http --build-arg GEOLITE2_LICENSE_KEY=<YOUR_LICENSE_KEY> .
 ```
 
 Run an image inside of a container:
