@@ -87,6 +87,10 @@ RUN wget -qO- "https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz" | tar -xz
     make && \
     make install
 
+WORKDIR /etc/nginx
+
+COPY nginx ./
+
 RUN rm -rf /tmp/build
 
 EXPOSE 80
