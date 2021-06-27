@@ -4,7 +4,7 @@
 
 ## License
 
-This ... is licensed under the Apache License, Version 2.
+This project is licensed under the ISC License.
 
 ## Prerequisites
 
