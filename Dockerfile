@@ -93,9 +93,9 @@ RUN wget -qO- "https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz" \
     && make install \
     && nginx -V
 
-WORKDIR /etc/nginx
+WORKDIR /
 
-COPY nginx ./
+COPY nginx /etc/nginx
 
 RUN rm -rf /tmp/build
 
