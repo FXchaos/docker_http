@@ -4,12 +4,13 @@ ARG GEOLITE2_LICENSE_KEY=
 
 FROM centos:$CENTOS_VERSION
 
+RUN set -x \
+    && groupadd -f -r -g 101 nginx \
+    && useradd -r -m -d /var/cache/nginx -s /sbin/nologin -u 101 -G nginx -g nginx nginx
+
+RUN dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 RUN dnf -y upgrade
 RUN dnf -y install autoconf automake gd-devel git libtool libxml2-devel libxslt-devel make openssl-devel pcre-devel perl-ExtUtils-Embed wget zlib-devel
-
-RUN set -x \
-    && groupadd -r -f -g 101 nginx \
-    && useradd -r -m -d /var/cache/nginx -s /sbin/nologin -u 101 -G nginx -g nginx nginx
 
 WORKDIR /tmp/build
 
