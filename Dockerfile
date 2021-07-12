@@ -10,7 +10,20 @@ RUN set -x \
 
 RUN dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 RUN dnf -y upgrade
-RUN dnf -y install autoconf automake gd-devel git libtool libxml2-devel libxslt-devel make openssl-devel pcre-devel perl-ExtUtils-Embed wget zlib-devel
+RUN dnf -y install \
+    autoconf \
+    automake \
+    gd-devel \
+    git \
+    libtool \
+    libxml2-devel \
+    libxslt-devel \
+    make \
+    openssl-devel \
+    pcre-devel \
+    perl-ExtUtils-Embed \
+    wget \
+    zlib-devel
 
 WORKDIR /tmp/build
 
