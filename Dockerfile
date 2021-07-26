@@ -1,6 +1,6 @@
 ARG CENTOS_VERSION=8.3.2011
 ARG NGINX_VERSION=1.21.0
-ARG GEOLITE2_LICENSE_KEY=
+ARG HTTP__KEY_LICENSE_GEOLITE2=
 
 FROM centos:$CENTOS_VERSION
 
@@ -27,12 +27,12 @@ RUN dnf -y install \
 
 WORKDIR /tmp/build
 
-ARG GEOLITE2_LICENSE_KEY
+ARG HTTP__KEY_LICENSE_GEOLITE2
 RUN mkdir {/usr/share/maxmind,GeoLite2-Country,GeoLite2-City} \
-    && wget -qO- "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=$GEOLITE2_LICENSE_KEY&suffix=tar.gz" \
+    && wget -qO- "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=$HTTP__KEY_LICENSE_GEOLITE2&suffix=tar.gz" \
     | tar -xzv -C GeoLite2-Country --strip-components=1 \
     && mv GeoLite2-Country/*.mmdb /usr/share/maxmind \
-    && wget -qO- "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&license_key=$GEOLITE2_LICENSE_KEY&suffix=tar.gz" \
+    && wget -qO- "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&license_key=$HTTP__KEY_LICENSE_GEOLITE2&suffix=tar.gz" \
     | tar -xzv -C GeoLite2-City --strip-components=1 \
     && mv GeoLite2-City/*.mmdb /usr/share/maxmind
 

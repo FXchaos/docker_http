@@ -20,7 +20,7 @@ This project is licensed under the ISC License.
 Build an image:
 
 ```
-docker build -t http --build-arg GEOLITE2_LICENSE_KEY=<YOUR_LICENSE_KEY> .
+docker build -t http --build-arg HTTP__KEY_LICENSE_GEOLITE2=<YOUR_LICENSE_KEY> .
 ```
 
 Run an image inside of a container:
